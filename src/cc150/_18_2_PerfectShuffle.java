@@ -6,6 +6,8 @@
  */
 package cc150;
 
+import java.util.Random;
+
 public class _18_2_PerfectShuffle {
 
 	public static int[] shuffleArrayRecursively(int[] cards, int i) {
@@ -38,6 +40,8 @@ public class _18_2_PerfectShuffle {
 
 	private static int rand(int lower, int higher) {
 
-		return lower + (int) (Math.random() * (higher - lower + 1));
+		Random r = new Random();
+		
+		return lower + r.nextInt(higher - lower);
 	}
 }
